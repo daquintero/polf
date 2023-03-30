@@ -1,0 +1,38 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1680189100
+<< obsli1 >>
+rect 1104 2159 5796 9265
+<< obsm1 >>
+rect 14 2128 6518 10192
+<< metal2 >>
+rect 6458 10624 6514 11424
+rect 18 0 74 800
+<< obsm2 >>
+rect 20 10568 6402 10624
+rect 20 856 6512 10568
+rect 130 800 6512 856
+<< obsm3 >>
+rect 1946 2143 2922 9281
+<< metal4 >>
+rect 1944 2128 2264 9296
+rect 2604 2128 2924 9296
+<< labels >>
+rlabel metal4 s 2604 2128 2924 9296 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal4 s 1944 2128 2264 9296 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal2 s 6458 10624 6514 11424 6 in
+port 3 nsew signal input
+rlabel metal2 s 18 0 74 800 6 out
+port 4 nsew signal output
+<< properties >>
+string FIXED_BBOX 0 0 6900 11424
+string LEFclass BLOCK
+string LEFview TRUE
+string GDS_END 57078
+string GDS_FILE /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/inverter.magic.gds
+string GDS_START 29698
+<< end >>
+

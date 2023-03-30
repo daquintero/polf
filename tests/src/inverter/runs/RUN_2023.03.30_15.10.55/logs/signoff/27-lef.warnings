@@ -1,0 +1,20 @@
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__tapvpwrvgnd_1" at bad file path /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/sky130_fd_sc_hd__tapvpwrvgnd_1.mag.
+Warning: cell <sky130_fd_sc_hd__tapvpwrvgnd_1> from file /home/dq16394/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__tapvpwrvgnd_1.mag is not writeable
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__decap_3" at bad file path /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/sky130_fd_sc_hd__decap_3.mag.
+Warning: cell <sky130_fd_sc_hd__decap_3> from file /home/dq16394/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__decap_3.mag is not writeable
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__buf_2" at bad file path /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/sky130_fd_sc_hd__buf_2.mag.
+Warning: cell <sky130_fd_sc_hd__buf_2> from file /home/dq16394/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__buf_2.mag is not writeable
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__clkbuf_1" at bad file path /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/sky130_fd_sc_hd__clkbuf_1.mag.
+Warning: cell <sky130_fd_sc_hd__clkbuf_1> from file /home/dq16394/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__clkbuf_1.mag is not writeable
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__fill_2" at bad file path /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/sky130_fd_sc_hd__fill_2.mag.
+Warning: cell <sky130_fd_sc_hd__fill_2> from file /home/dq16394/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__fill_2.mag is not writeable
+Warning:  Parent cell lists instance of "sky130_ef_sc_hd__decap_12" at bad file path /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/sky130_ef_sc_hd__decap_12.mag.
+Warning: cell <sky130_ef_sc_hd__decap_12> from file /home/dq16394/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_ef_sc_hd__decap_12.mag is not writeable
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__fill_1" at bad file path /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/sky130_fd_sc_hd__fill_1.mag.
+Warning: cell <sky130_fd_sc_hd__fill_1> from file /home/dq16394/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__fill_1.mag is not writeable
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__decap_8" at bad file path /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/sky130_fd_sc_hd__decap_8.mag.
+Warning: cell <sky130_fd_sc_hd__decap_8> from file /home/dq16394/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__decap_8.mag is not writeable
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__decap_6" at bad file path /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/sky130_fd_sc_hd__decap_6.mag.
+Warning: cell <sky130_fd_sc_hd__decap_6> from file /home/dq16394/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__decap_6.mag is not writeable
+Warning:  Parent cell lists instance of "sky130_fd_sc_hd__inv_2" at bad file path /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/results/signoff/sky130_fd_sc_hd__inv_2.mag.
+Warning: cell <sky130_fd_sc_hd__inv_2> from file /home/dq16394/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/maglef/sky130_fd_sc_hd__inv_2.mag is not writeable

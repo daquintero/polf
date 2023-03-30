@@ -1,0 +1,19 @@
+set ::env(PDK) {sky130A}
+set ::env(PDKPATH) {/home/dq16394/OpenLane/pdks/sky130A}
+set ::env(STD_CELL_LIBRARY) {sky130_fd_sc_hd}
+set ::env(SCLPATH) {/home/dq16394/OpenLane/pdks/sky130A/sky130_fd_sc_hd}
+set ::env(DESIGN_DIR) {/openlane/designs/inverter}
+set ::env(DESIGN_NAME) {inverter}
+set ::env(VERILOG_FILES) {/openlane/designs/inverter/src/inverter.v}
+set ::env(CLOCK_TREE_SYNTH) {0}
+set ::env(CLOCK_PORT) {}
+set ::env(PL_RANDOM_GLB_PLACEMENT) {1}
+set ::env(FP_SIZING) {absolute}
+set ::env(DIE_AREA) {0 0 34.5 57.12}
+set ::env(PL_TARGET_DENSITY) {0.75}
+set ::env(FP_PDN_AUTO_ADJUST) {0}
+set ::env(FP_PDN_VPITCH) {25}
+set ::env(FP_PDN_HPITCH) {25}
+set ::env(FP_PDN_VOFFSET) {5}
+set ::env(FP_PDN_HOFFSET) {5}
+set ::env(DIODE_INSERTION_STRATEGY) {3}

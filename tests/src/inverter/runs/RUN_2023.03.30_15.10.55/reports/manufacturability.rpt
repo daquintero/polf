@@ -1,0 +1,17 @@
+Design Name: inverter
+Run Directory: /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/logs/signoff/33-inverter.lef.lvs.log
+Number of nets: 6                          |Number of nets: 6                          
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+No antenna report found.
