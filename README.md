@@ -1,2 +1,2 @@
 # rpt_parser
-Report RPT file parser for Openlane OpenROAD Static Timing Analysis output files. 
+Python-based report file (RPT) parser for Openlane OpenROAD Static Timing Analysis (STA) output files. 
