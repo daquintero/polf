@@ -1,6 +1,5 @@
 class ParserRPT:
     """
-
     Methodology:
     1. Read metadata on the type of file and run this is.
     2. Identify the boundary lines of the table data through regex matching.
