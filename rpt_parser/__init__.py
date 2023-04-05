@@ -1,1 +1,1 @@
-from .core import ParserRPT
+from .core import OpenSTAParser
