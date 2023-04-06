@@ -20,9 +20,9 @@ class OpenSTAParser:
 
         # Internal
         self.file_lines_raw = None
-        self.timing_data = None
         self.file_lines_raw = None
         self.file_lines_data = None
+        self.propagation_delay = {}
         self.meta_data = pd.DataFrame()
 
         self.read_file_meta_data()
@@ -31,6 +31,7 @@ class OpenSTAParser:
         self.frame_timing_data = {}
         for frame_id in range(self.maximum_frame_amount):
             self.frame_timing_data[frame_id] = self.extract_timing_data(frame_id=frame_id)
+            self.propagation_delay[frame_id] = self.calculate_propagation_delay(timing_data=self.frame_timing_data[frame_id])
 
     def read_file_meta_data(self):
         self.file = open(self.file_address, "r")
@@ -107,8 +108,9 @@ class OpenSTAParser:
         timing_data["net"] = timing_data["Description"].str.extract(r'\(([^()]+)\)')
         return timing_data
 
-    def propagation_delay(self,
+    def calculate_propagation_delay(self,
                           net_in="in",
-                          net_out="out"):
-        return self.timing_data[self.timing_data.net == net_out].Time.values - self.timing_data[
-            self.timing_data.net == net_in].Time.values
+                          net_out="out",
+                          timing_data=None,
+                          ):
+        return float(timing_data[timing_data.net == net_out].Time.values) - float(timing_data[timing_data.net == net_in].Time.values)

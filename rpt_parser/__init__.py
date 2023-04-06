@@ -1,1 +1,1 @@
-from .core import OpenSTAParser
+from .open_sta_parser import OpenSTAParser
