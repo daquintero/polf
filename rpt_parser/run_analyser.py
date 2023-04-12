@@ -1,6 +1,7 @@
 import glob
 import os
 
+from .open_sta_parser import OpenSTAParser
 
 class RunAnalyser:
     """
