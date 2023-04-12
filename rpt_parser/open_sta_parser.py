@@ -37,6 +37,9 @@ class OpenSTAParser:
                 # TODO bit hackish and unconvincing
                 frame_net_in = self.start_point_name.values[frame_id][0]
                 frame_net_out = self.end_point_name.values[frame_id][0]
+                print(self.file_address)
+                print(frame_net_in)
+                print(frame_net_out)
                 propagation_delay = self.calculate_propagation_delay(
                     net_in=frame_net_in,
                     net_out=frame_net_out,
