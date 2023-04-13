@@ -40,13 +40,9 @@ class OpenSTAParser:
                 print(self.file_address)
                 print(frame_net_in)
                 print(frame_net_out)
-                propagation_delay = self.calculate_propagation_delay(
-                    # net_in=frame_net_in,
-                    # net_out=frame_net_out,
-                    net_in="in",
-                    net_out="out",
-                    timing_data=self.frame_timing_data[frame_id]
-                )
+                propagation_delay = self.calculate_propagation_delay(net_name_in=frame_net_in,
+                                                                     net_name_out=frame_net_out,
+                                                                     timing_data=self.frame_timing_data[frame_id])
 
                 self.propagation_delay[frame_id] = {
                     "net_in": frame_net_in,
@@ -126,17 +122,20 @@ class OpenSTAParser:
                                   skiprows=self.frame_meta_data[frame_id]["start_rows_skip"],
                                   skipfooter=self.frame_meta_data[frame_id]["end_rows_skip"],
                                   names=["Fanout", "Cap", "Slew", "Delay", "Time", "Direction", "Description"])
-        timing_data["net"] = timing_data["Description"].str.extract(r'\(([^()]+)\)')
+        timing_data["net_type"] = timing_data["Description"].str.extract(r'\(([^()]+)\)')
+        timing_data["net_name"] = timing_data["Description"].str.extract(r'(.*?)\s?\(.*?\)')
         return timing_data
 
     def calculate_propagation_delay(self,
-                          net_in="in",
-                          net_out="out",
+                          net_name_in="in",
+                          net_name_out="out",
                           timing_data=None,
                           ):
-        # print(timing_data)
+        # pass
+        print(timing_data)
         # print(pd.to_numeric(timing_data[timing_data.net == net_out].Time))
-        # print(timing_data[timing_data.net == net_in])
-        # print(float(timing_data[timing_data.net == net_out].Time.values))
-        # return float(timing_data[timing_data.net == net_out].Time.values) - float(timing_data[timing_data.net == net_in].Time.values)
+        print(timing_data[timing_data.net_name == net_name_in and (timing_data.net_type == "in")])
+        print(timing_data[timing_data.net_name == net_name_out])
+        return float(timing_data[timing_data.net_name == net_name_out].Time.values) - \
+            float(timing_data[(timing_data.net_name == net_name_in) and (timing_data.net_type == "in")].Time.values)
         # return pd.to_numeric(timing_data[timing_data.net == net_out].Time) - pd.to_numeric(timing_data[timing_data.net == net_in].Time)
