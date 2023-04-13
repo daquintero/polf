@@ -134,8 +134,10 @@ class OpenSTAParser:
         # pass
         print(timing_data)
         # print(pd.to_numeric(timing_data[timing_data.net == net_out].Time))
-        print(timing_data[timing_data.net_name == net_name_in and (timing_data.net_type == "in")])
-        print(timing_data[timing_data.net_name == net_name_out])
-        return float(timing_data[timing_data.net_name == net_name_out].Time.values) - \
-            float(timing_data[(timing_data.net_name == net_name_in) and (timing_data.net_type == "in")].Time.values)
+        # print(timing_data[(timing_data.net_name == net_name_in) & (timing_data.net_type == "in")].iloc[0])
+        # print(timing_data[(timing_data.net_name == net_name_out) & (timing_data.net_type == "out")].iloc[0])
+        if (len(timing_data[(timing_data.net_name == net_name_in) & (timing_data.net_type == "in")]) > 0) \
+                and (len(timing_data[(timing_data.net_name == net_name_out) & (timing_data.net_type == "out")]) > 0):
+            return float(timing_data[(timing_data.net_name == net_name_out) & (timing_data.net_type == "out")].iloc[0].Time) - \
+                float(timing_data[(timing_data.net_name == net_name_in) & (timing_data.net_type == "in")].iloc[0].Time)
         # return pd.to_numeric(timing_data[timing_data.net == net_out].Time) - pd.to_numeric(timing_data[timing_data.net == net_in].Time)
