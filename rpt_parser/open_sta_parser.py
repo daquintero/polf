@@ -37,18 +37,11 @@ class OpenSTAParser:
                 # TODO bit hackish and unconvincing
                 frame_net_in = self.start_point_name.values[frame_id][0]
                 frame_net_out = self.end_point_name.values[frame_id][0]
-                print(self.file_address)
-                print(frame_net_in)
-                print(frame_net_out)
                 propagation_delay = self.calculate_propagation_delay(net_name_in=frame_net_in,
                                                                      net_name_out=frame_net_out,
                                                                      timing_data=self.frame_timing_data[frame_id])
 
-                self.propagation_delay[frame_id] = {
-                    "net_in": frame_net_in,
-                    "net_out": frame_net_out,
-                    "propagation_delay": propagation_delay,
-                }
+                self.propagation_delay[frame_id] = propagation_delay
 
     def read_file_meta_data(self):
         self.file = open(self.file_address, "r")
@@ -131,25 +124,13 @@ class OpenSTAParser:
                           net_name_out="out",
                           timing_data=None,
                           ):
-        # pass
-        print(timing_data)
-        # print(pd.to_numeric(timing_data[timing_data.net == net_out].Time))
-        # print(timing_data[(timing_data.net_name == net_name_in) & (timing_data.net_type == "in")].iloc[0])
-        # print(timing_data[(timing_data.net_name == net_name_out) & (timing_data.net_type == "out")].iloc[0])
-        # print(timing_data[(timing_data.net_type == "in")])
-        # print(timing_data[(timing_data.net_type == "out")])
         if (len(timing_data[(timing_data.net_name == net_name_in) & (timing_data.net_type == "in")]) > 0) \
                 and (len(timing_data[(timing_data.net_name == net_name_out) & (timing_data.net_type == "out")]) > 0):
-            # return float(timing_data[(timing_data.net_name == net_name_out) & (timing_data.net_type == "out")].iloc[0].Time) - \
-            #     float(timing_data[(timing_data.net_name == net_name_in) & (timing_data.net_type == "in")].iloc[0].Time)
             output_net_datafame = timing_data[(timing_data.net_type == "out")].copy().add_suffix("_out").reset_index()
             input_net_datafame = timing_data[(timing_data.net_type == "in")].copy().add_suffix("_in").reset_index()
-            print(output_net_datafame)
-            print(input_net_datafame)
             propagation_delay_dataframe = output_net_datafame.merge(input_net_datafame, left_index=True, right_index=True)
             propagation_delay_dataframe["propagation_delay"] = pd.to_numeric(output_net_datafame.iloc[:].Time_out.values) \
                 - pd.to_numeric(input_net_datafame.iloc[:].Time_in.values)
-            print(propagation_delay_dataframe)
             return propagation_delay_dataframe
 
         # return pd.to_numeric(timing_data[timing_data.net == net_out].Time) - pd.to_numeric(timing_data[timing_data.net == net_in].Time)
