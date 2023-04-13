@@ -41,8 +41,10 @@ class OpenSTAParser:
                 print(frame_net_in)
                 print(frame_net_out)
                 propagation_delay = self.calculate_propagation_delay(
-                    net_in=frame_net_in,
-                    net_out=frame_net_out,
+                    # net_in=frame_net_in,
+                    # net_out=frame_net_out,
+                    net_in="in",
+                    net_out="out",
                     timing_data=self.frame_timing_data[frame_id]
                 )
 
@@ -132,4 +134,9 @@ class OpenSTAParser:
                           net_out="out",
                           timing_data=None,
                           ):
-        return float(timing_data[timing_data.net == net_out].Time.values) - float(timing_data[timing_data.net == net_in].Time.values)
+        # print(timing_data)
+        # print(pd.to_numeric(timing_data[timing_data.net == net_out].Time))
+        # print(timing_data[timing_data.net == net_in])
+        # print(float(timing_data[timing_data.net == net_out].Time.values))
+        # return float(timing_data[timing_data.net == net_out].Time.values) - float(timing_data[timing_data.net == net_in].Time.values)
+        # return pd.to_numeric(timing_data[timing_data.net == net_out].Time) - pd.to_numeric(timing_data[timing_data.net == net_in].Time)
