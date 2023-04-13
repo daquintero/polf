@@ -136,8 +136,20 @@ class OpenSTAParser:
         # print(pd.to_numeric(timing_data[timing_data.net == net_out].Time))
         # print(timing_data[(timing_data.net_name == net_name_in) & (timing_data.net_type == "in")].iloc[0])
         # print(timing_data[(timing_data.net_name == net_name_out) & (timing_data.net_type == "out")].iloc[0])
+        # print(timing_data[(timing_data.net_type == "in")])
+        # print(timing_data[(timing_data.net_type == "out")])
         if (len(timing_data[(timing_data.net_name == net_name_in) & (timing_data.net_type == "in")]) > 0) \
                 and (len(timing_data[(timing_data.net_name == net_name_out) & (timing_data.net_type == "out")]) > 0):
-            return float(timing_data[(timing_data.net_name == net_name_out) & (timing_data.net_type == "out")].iloc[0].Time) - \
-                float(timing_data[(timing_data.net_name == net_name_in) & (timing_data.net_type == "in")].iloc[0].Time)
+            # return float(timing_data[(timing_data.net_name == net_name_out) & (timing_data.net_type == "out")].iloc[0].Time) - \
+            #     float(timing_data[(timing_data.net_name == net_name_in) & (timing_data.net_type == "in")].iloc[0].Time)
+            output_net_datafame = timing_data[(timing_data.net_type == "out")].copy().add_suffix("_out").reset_index()
+            input_net_datafame = timing_data[(timing_data.net_type == "in")].copy().add_suffix("_in").reset_index()
+            print(output_net_datafame)
+            print(input_net_datafame)
+            propagation_delay_dataframe = output_net_datafame.merge(input_net_datafame, left_index=True, right_index=True)
+            propagation_delay_dataframe["propagation_delay"] = pd.to_numeric(output_net_datafame.iloc[:].Time_out.values) \
+                - pd.to_numeric(input_net_datafame.iloc[:].Time_in.values)
+            print(propagation_delay_dataframe)
+            return propagation_delay_dataframe
+
         # return pd.to_numeric(timing_data[timing_data.net == net_out].Time) - pd.to_numeric(timing_data[timing_data.net == net_in].Time)
