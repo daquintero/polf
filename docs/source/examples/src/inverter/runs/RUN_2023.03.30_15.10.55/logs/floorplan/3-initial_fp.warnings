@@ -1,0 +1,4 @@
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/tmp/merged.nom.lef at line 930.
+[WARNING STA-0337] port '__VIRTUAL_CLK__' not found.
+[WARNING STA-0559] transition time can not be specified for virtual clocks.

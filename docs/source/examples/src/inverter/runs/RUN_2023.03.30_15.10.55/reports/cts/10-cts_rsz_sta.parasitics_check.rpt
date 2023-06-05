@@ -1,0 +1,79 @@
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 4 unannotated drivers.
+ in
+ _0_/Y
+ input1/X
+ output2/X
+Found 0 partially unannotated drivers.
+parastic_annotation_check
+check_slew
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+check_slew_end
+tns_report
+
+===========================================================================
+ report_tns
+============================================================================
+tns 0.00
+tns_report_end
+wns_report
+
+===========================================================================
+ report_wns
+============================================================================
+wns 0.00
+wns_report_end
+worst_slack
+
+===========================================================================
+ report_worst_slack -max (Setup)
+============================================================================
+worst slack 5.40
+
+===========================================================================
+ report_worst_slack -min (Hold)
+============================================================================
+worst slack 4.06
+worst_slack_end
+power_report
+
+===========================================================================
+ report_power
+============================================================================
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          2.65e-07   7.14e-07   9.36e-11   9.80e-07 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  2.65e-07   7.14e-07   9.36e-11   9.80e-07 100.0%
+                          27.1%      72.9%       0.0%
+power_report_end
+area_report
+
+===========================================================================
+ report_design_area
+============================================================================
+Design area 21 u^2 3% utilization.
+area_report_end
+Setting global connections for newly added cells...
+Writing OpenROAD database to /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/tmp/cts/10-inverter.resized.odb...
+Writing netlist to /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/tmp/cts/10-inverter.resized.nl.v...
+Writing powered netlist to /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/tmp/cts/10-inverter.resized.pnl.v...
+Writing layout to /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/tmp/cts/10-inverter.resized.def...
+Writing timing constraints to /openlane/designs/inverter/runs/RUN_2023.03.30_15.10.55/tmp/cts/10-inverter.resized.sdc...
+

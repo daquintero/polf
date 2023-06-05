@@ -1,9 +1,9 @@
 import os
-import polf
+import porf
 
-example_file_address = os.path.dirname(polf.__file__) + "/../tests/25-rcx_sta.rpt"
+example_file_address = os.path.dirname(porf.__file__) + "/../tests/25-rcx_sta.rpt"
 
-test = polf.OpenSTAParser(
+test = porf.OpenSTAParser(
     file_address=example_file_address,
 )
 
