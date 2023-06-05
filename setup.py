@@ -13,9 +13,9 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 setuptools.setup(
-    name="rpt_parser",
-    version="0.0.2",
-    description="Report RPT file parser for Openlane OpenROAD Static Timing Analysis output files.",
+    name="polf",
+    version="0.0.3",
+    description="Parse OpenLane Files - RPT file parser for Openlane OpenROAD Static Timing Analysis output files.",
     extras_require={
         "develop": [
             "sphinx",
@@ -27,7 +27,7 @@ setuptools.setup(
     },
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/daquintero/rpt_parser",
+    url="https://github.com/daquintero/polf",
     author="Dario Quintero",
     author_email="darioaquintero@gmail.com",
     packages=setuptools.find_packages(),
@@ -38,5 +38,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.7",
 )

@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'rpt_parser'
+project = 'polf'
 copyright = '2023, Dario Quintero'
 author = 'Dario Quintero'
 
