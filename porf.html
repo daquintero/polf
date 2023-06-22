@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>porf package &#8212; porf  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="autoapi/index.html" />
+    <link rel="prev" title="porf" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="porf-package">
+<h1>porf package<a class="headerlink" href="#porf-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-porf.open_sta_parser">
+<span id="porf-open-sta-parser-module"></span><h2>porf.open_sta_parser module<a class="headerlink" href="#module-porf.open_sta_parser" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="porf.open_sta_parser.OpenSTAParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">OpenSTAParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_address</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'25-rcx_sta.rpt'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/open_sta_parser.html#OpenSTAParser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.open_sta_parser.OpenSTAParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Methodology:
+1. Read metadata on the type of file and run this is.
+2. Identify the boundary lines of the table data through regex matching.
+3. Read in table data of the timing performance.
+4. Understand the relevant timing and data parameters.
+5. Extract the relevant timing and data parameters from the</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="porf.open_sta_parser.OpenSTAParser.calculate_propagation_delay">
+<span class="sig-name descname"><span class="pre">calculate_propagation_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">net_name_in</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'in'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">net_name_out</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'out'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timing_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/open_sta_parser.html#OpenSTAParser.calculate_propagation_delay"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.open_sta_parser.OpenSTAParser.calculate_propagation_delay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="porf.open_sta_parser.OpenSTAParser.configure_frame_id">
+<span class="sig-name descname"><span class="pre">configure_frame_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/open_sta_parser.html#OpenSTAParser.configure_frame_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.open_sta_parser.OpenSTAParser.configure_frame_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="porf.open_sta_parser.OpenSTAParser.configure_timing_data_rows">
+<span class="sig-name descname"><span class="pre">configure_timing_data_rows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/open_sta_parser.html#OpenSTAParser.configure_timing_data_rows"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.open_sta_parser.OpenSTAParser.configure_timing_data_rows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="porf.open_sta_parser.OpenSTAParser.extract_frame_meta_data">
+<span class="sig-name descname"><span class="pre">extract_frame_meta_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/open_sta_parser.html#OpenSTAParser.extract_frame_meta_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.open_sta_parser.OpenSTAParser.extract_frame_meta_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="porf.open_sta_parser.OpenSTAParser.extract_timing_data">
+<span class="sig-name descname"><span class="pre">extract_timing_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/open_sta_parser.html#OpenSTAParser.extract_timing_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.open_sta_parser.OpenSTAParser.extract_timing_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="porf.open_sta_parser.OpenSTAParser.read_file_meta_data">
+<span class="sig-name descname"><span class="pre">read_file_meta_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/open_sta_parser.html#OpenSTAParser.read_file_meta_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.open_sta_parser.OpenSTAParser.read_file_meta_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-porf.run_analyser">
+<span id="porf-run-analyser-module"></span><h2>porf.run_analyser module<a class="headerlink" href="#module-porf.run_analyser" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="porf.run_analyser.RunAnalyser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RunAnalyser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/run_analyser.html#RunAnalyser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.run_analyser.RunAnalyser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class aims to list and perform analysis on all the relevant files in a particular run between all the corners.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="porf.run_analyser.RunAnalyser.extract_metrics_power">
+<span class="sig-name descname"><span class="pre">extract_metrics_power</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/run_analyser.html#RunAnalyser.extract_metrics_power"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.run_analyser.RunAnalyser.extract_metrics_power" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="porf.run_analyser.RunAnalyser.extract_metrics_timing">
+<span class="sig-name descname"><span class="pre">extract_metrics_timing</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/run_analyser.html#RunAnalyser.extract_metrics_timing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.run_analyser.RunAnalyser.extract_metrics_timing" title="Permalink to this definition">¶</a></dt>
+<dd><p>For every file in the sta timing file, extract the propagation delay and save the file meta data into a dicitonary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="porf.run_analyser.RunAnalyser.get_all_rpt_files">
+<span class="sig-name descname"><span class="pre">get_all_rpt_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/porf/run_analyser.html#RunAnalyser.get_all_rpt_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#porf.run_analyser.RunAnalyser.get_all_rpt_files" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-porf">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-porf" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">porf</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="examples/get_started.html">Get Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">porf</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">porf package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autoapi/index.html">API Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">porf</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">porf</a></li>
+      <li>Next: <a href="autoapi/index.html" title="next chapter">API Reference</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Dario Quintero.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
