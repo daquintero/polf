@@ -1,5 +1,7 @@
 # PORF
 
+**NOTE THIS PROJECT HAS BEEN SUPERSEDED BY https://github.com/daquintero/piel AND WILL BE DISCONTINUED FROM PYPI** 
+
 Parse OpenRoad Files - A Python Pandas-based report file (RPT) parser for Openlane OpenROAD Static Timing Analysis (STA) output files. 
 
 
